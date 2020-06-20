@@ -9,6 +9,8 @@ namespace Volo.Abp.TenantManagement.EntityFrameworkCore
     {
         public DbSet<Tenant> Tenants { get; set; }
 
+        public DbSet<TenantApplication> TenantApplications { get; set; }
+
         public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
         public TenantManagementDbContext(DbContextOptions<TenantManagementDbContext> options)

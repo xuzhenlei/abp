@@ -25,6 +25,11 @@ namespace Volo.Abp.Identity
             identityGroup
                 .AddPermission(IdentityPermissions.UserLookup.Default, L("Permission:UserLookup"))
                 .WithProviders(ClientPermissionValueProvider.ProviderName);
+
+            var organizationUnitPermission = identityGroup.AddPermission(IdentityPermissions.OrganizationUnit.Default, L("Permission:OrganizationUnitManagement"));
+            organizationUnitPermission.AddChild(IdentityPermissions.OrganizationUnit.Create, L("Permission:Create"));
+            organizationUnitPermission.AddChild(IdentityPermissions.OrganizationUnit.Update, L("Permission:Edit"));
+            organizationUnitPermission.AddChild(IdentityPermissions.OrganizationUnit.Delete, L("Permission:Delete"));
         }
 
         private static LocalizableString L(string name)

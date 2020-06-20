@@ -13,6 +13,7 @@ namespace Volo.Abp.TenantManagement.EntityFrameworkCore
             }
 
             return queryable
+                .Include(x => x.Applications)
                 .Include(x => x.ConnectionStrings);
         }
     }

@@ -15,6 +15,7 @@ namespace Volo.Abp.TenantManagement
             tenantsPermission.AddChild(TenantManagementPermissions.Tenants.Create, L("Permission:Create"), multiTenancySide: MultiTenancySides.Host);
             tenantsPermission.AddChild(TenantManagementPermissions.Tenants.Update, L("Permission:Edit"), multiTenancySide: MultiTenancySides.Host);
             tenantsPermission.AddChild(TenantManagementPermissions.Tenants.Delete, L("Permission:Delete"), multiTenancySide: MultiTenancySides.Host);
+            tenantsPermission.AddChild(TenantManagementPermissions.Tenants.ManageState, L("Permission:ManageState"), multiTenancySide: MultiTenancySides.Host);
             tenantsPermission.AddChild(TenantManagementPermissions.Tenants.ManageFeatures, L("Permission:ManageFeatures"), multiTenancySide: MultiTenancySides.Host);
             tenantsPermission.AddChild(TenantManagementPermissions.Tenants.ManageConnectionStrings, L("Permission:ManageConnectionStrings"), multiTenancySide: MultiTenancySides.Host);
         }

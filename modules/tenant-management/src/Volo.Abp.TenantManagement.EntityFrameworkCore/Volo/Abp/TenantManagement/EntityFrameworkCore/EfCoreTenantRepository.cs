@@ -43,10 +43,10 @@ namespace Volo.Abp.TenantManagement.EntityFrameworkCore
         }
 
         public virtual async Task<List<Tenant>> GetListAsync(
+            string filter = null,
             string sorting = null,
             int maxResultCount = int.MaxValue,
             int skipCount = 0,
-            string filter = null,
             bool includeDetails = false,
             CancellationToken cancellationToken = default)
         {

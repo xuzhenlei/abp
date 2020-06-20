@@ -12,6 +12,8 @@ $solutionPaths = (
     "../modules/feature-management",
     "../modules/identity",
     "../modules/identityserver",
+	"../modules/dictory-management",
+	"../modules/edition-management",
     "../modules/tenant-management",
     "../modules/account",
     "../modules/docs",

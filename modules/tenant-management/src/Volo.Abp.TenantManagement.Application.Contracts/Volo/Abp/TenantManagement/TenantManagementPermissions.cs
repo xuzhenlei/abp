@@ -12,6 +12,7 @@ namespace Volo.Abp.TenantManagement
             public const string Create = Default + ".Create";
             public const string Update = Default + ".Update";
             public const string Delete = Default + ".Delete";
+            public const string ManageState = Default + ".ManageState";
             public const string ManageFeatures = Default + ".ManageFeatures";
             public const string ManageConnectionStrings = Default + ".ManageConnectionStrings";
         }

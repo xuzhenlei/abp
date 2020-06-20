@@ -6,6 +6,8 @@ namespace Volo.Abp.TenantManagement
 {
     public interface ITenantAppService : ICrudAppService<TenantDto, Guid, GetTenantsInput, TenantCreateDto, TenantUpdateDto>
     {
+        Task ChangeState(Guid id, TenantState state);
+
         Task<string> GetDefaultConnectionStringAsync(Guid id);
 
         Task UpdateDefaultConnectionStringAsync(Guid id, string defaultConnectionString);

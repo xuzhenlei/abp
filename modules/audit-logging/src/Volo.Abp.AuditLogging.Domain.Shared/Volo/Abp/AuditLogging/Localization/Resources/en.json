@@ -1,0 +1,7 @@
+﻿{
+  "culture": "en",
+  "texts": {
+    "Permission:AuditLogging": "Audit logging",
+    "Permission:AuditLogs": "Audit logs"
+  }
+}

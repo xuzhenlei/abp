@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AADC5A0A-F100-4511-87DE-B74E55F5B69B}"
 EndProject
@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.Identity.Domain.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.Identity.AspNetCore", "src\Volo.Abp.Identity.AspNetCore\Volo.Abp.Identity.AspNetCore.csproj", "{D5EFC912-75A0-4856-9B8D-DFDD4CD66BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.PermissionManagement.Domain.Identity", "src\Volo.Abp.PermissionManagement.Domain.Identity\Volo.Abp.PermissionManagement.Domain.Identity.csproj", "{736F91E7-8A70-441B-89DE-0E29A348E718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.PermissionManagement.Domain.Identity", "src\Volo.Abp.PermissionManagement.Domain.Identity\Volo.Abp.PermissionManagement.Domain.Identity.csproj", "{736F91E7-8A70-441B-89DE-0E29A348E718}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

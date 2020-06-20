@@ -6,7 +6,7 @@ namespace Volo.Abp.TenantManagement
     {
         public AbpTenantManagementApplicationAutoMapperProfile()
         {
-            CreateMap<Tenant, TenantDto>()
+            CreateMap<Tenant, TenantDto>(MemberList.None)
                 .MapExtraProperties();
         }
     }

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Volo.Abp.DictoryManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\Volo.Abp.AutoMapper\Volo.Abp.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\Volo.Abp.Ddd.Application\Volo.Abp.Ddd.Application.csproj" />
+    
+    <ProjectReference Include="..\Volo.Abp.DictoryManagement.Application.Contracts\Volo.Abp.DictoryManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Volo.Abp.DictoryManagement.Domain\Volo.Abp.DictoryManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

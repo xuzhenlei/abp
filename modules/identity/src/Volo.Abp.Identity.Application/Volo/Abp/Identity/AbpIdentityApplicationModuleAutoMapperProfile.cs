@@ -11,9 +11,14 @@ namespace Volo.Abp.Identity
 
             CreateMap<IdentityRole, IdentityRoleDto>()
                 .MapExtraProperties();
-            
+
             CreateMap<IdentityUser, ProfileDto>()
                 .MapExtraProperties();
+
+            CreateMap<OrganizationUnit, OrganizationUnitDto>()
+                .MapExtraProperties();
+
+            CreateMap<IdentityClaimType, IdentityClaimTypeDto>();
         }
     }
 }

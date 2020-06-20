@@ -24,10 +24,10 @@ namespace Volo.Abp.TenantManagement
         );
 
         Task<List<Tenant>> GetListAsync(
+            string filter = null,
             string sorting = null, 
             int maxResultCount = int.MaxValue, 
             int skipCount = 0, 
-            string filter = null, 
             bool includeDetails = false,
             CancellationToken cancellationToken = default);
 

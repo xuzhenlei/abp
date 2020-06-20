@@ -10,6 +10,32 @@ namespace Volo.Abp.TenantManagement
     {
         public virtual string Name { get; protected set; }
 
+        public virtual string DisplayName { get;protected set; }
+
+        public virtual TenantState State { get; protected set; }
+
+        public virtual decimal Balance { get; protected set; }
+
+        public virtual decimal TotalAmount { get; protected set; }
+
+        public virtual Guid Industry { get; protected set; }
+
+        public virtual string Contact { get; protected set; }
+
+        public virtual string Phone { get; protected set; }
+
+        public virtual string Province { get; protected set; }
+
+        public virtual string City { get; protected set; }
+
+        public virtual string Address { get; protected set; }
+        
+        public virtual string License { get; set; }
+
+        public virtual string Description { get; set; }
+
+        public virtual List<TenantApplication> Applications { get; protected set; }
+
         public virtual List<TenantConnectionString> ConnectionStrings { get; protected set; }
 
         protected Tenant()
@@ -21,8 +47,85 @@ namespace Volo.Abp.TenantManagement
             : base(id)
         {
             SetName(name);
-
+            Applications = new List<TenantApplication>();
             ConnectionStrings = new List<TenantConnectionString>();
+        }
+
+        protected internal virtual void SetName([NotNull] string name)
+        {
+            Name = Check.NotNullOrWhiteSpace(name, nameof(name), TenantConsts.MaxNameLength);
+        }
+
+        public virtual void SetDisplayName([NotNull] string name)
+        {
+            DisplayName = Check.NotNullOrWhiteSpace(name, nameof(name), TenantConsts.MaxDisplayNameLength);
+        }
+
+        protected internal virtual void SetState(TenantState state)
+        {
+            State = state;
+        }
+
+        protected internal virtual void SetBalance(decimal amount)
+        {
+            Balance = amount;
+        }
+
+        protected internal virtual void SetTotalAmount(decimal amount)
+        {
+            TotalAmount = amount;
+        }
+
+        public virtual void SetIndustry(Guid dataItemId)
+        {
+            Industry = dataItemId;
+        }
+
+        public virtual void SetContact([NotNull]string contact)
+        {
+            Contact = contact;
+        }
+
+        public virtual void SetPhone([NotNull]string phone)
+        {
+            Phone = phone;
+        }
+
+        public virtual void SetProvince([NotNull]string province)
+        {
+            Province = province;
+        }
+
+        public virtual void SetCity([NotNull]string city)
+        {
+            City = city;
+        }
+
+        public virtual void SetAddress([NotNull]string address)
+        {
+            Address = address;
+        }
+
+        public virtual void SetApplication(Guid editionId, ApplicationState state)
+        {
+            var tenantApplication = Applications.FirstOrDefault(t => t.EditionId == editionId);
+            if (tenantApplication == null)
+            {
+                Applications.Add(new TenantApplication(Id, editionId, state));
+            }
+        }
+
+        public virtual void RemoveApplication(Guid editionId)
+        {
+            var tenantApplication = Applications.FirstOrDefault(t => t.EditionId == editionId);
+            if (tenantApplication != null)
+            {
+                if (tenantApplication.State != ApplicationState.停用)
+                {
+                    throw new UserFriendlyException($"应用的状态必须为 {ApplicationState.停用}");
+                }
+                Applications.Remove(tenantApplication);
+            }
         }
 
         [CanBeNull]
@@ -69,11 +172,6 @@ namespace Volo.Abp.TenantManagement
             {
                 ConnectionStrings.Remove(tenantConnectionString);
             }
-        }
-
-        protected internal virtual void SetName([NotNull] string name)
-        {
-            Name = Check.NotNullOrWhiteSpace(name, nameof(name), TenantConsts.MaxNameLength);
         }
     }
 }

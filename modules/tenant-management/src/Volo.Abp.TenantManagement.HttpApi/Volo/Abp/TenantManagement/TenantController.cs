@@ -53,6 +53,13 @@ namespace Volo.Abp.TenantManagement
             return TenantAppService.DeleteAsync(id);
         }
 
+        [HttpPut]
+        [Route("{id}/change-state")]
+        public virtual Task ChangeState(Guid id, TenantState state)
+        {
+            return TenantAppService.ChangeState(id, state);
+        }
+
         [HttpGet]
         [Route("{id}/default-connection-string")]
         public virtual Task<string> GetDefaultConnectionStringAsync(Guid id)

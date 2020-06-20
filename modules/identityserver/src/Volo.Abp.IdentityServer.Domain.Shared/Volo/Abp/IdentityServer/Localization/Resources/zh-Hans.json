@@ -7,6 +7,13 @@
     "UserLockedOut": "登录失败,用户账户已被锁定.请稍后再试.",
     "InvalidUserNameOrPassword": "用户名或密码错误!",
     "LoginIsNotAllowed": "无法登录!你需要验证邮箱地址/手机号.",
-    "InvalidUsername": "用户名或密码错误!"
+    "InvalidUsername": "用户名或密码错误!",
+    "Permission:IdentityServer": "授权服务器",
+    "Permission:Clients": "客服端",
+    "Permission:ApiResources": "Api资源",
+    "Permission:IdentityResources": "Id资源",
+    "Permission:Create": "创建",
+    "Permission:Update": "编辑",
+    "Permission:Delete": "删除"
   }
 }

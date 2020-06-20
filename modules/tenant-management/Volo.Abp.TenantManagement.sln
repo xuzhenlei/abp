@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.TenantManagement.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.TenantManagement.TestBase", "test\Volo.Abp.TenantManagement.TestBase\Volo.Abp.TenantManagement.TestBase.csproj", "{C3BAD6E8-00CD-4283-9416-64287BB5B265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.TenantManagement.Domain.Tests", "test\Volo.Abp.TenantManagement.Domain.Tests\Volo.Abp.TenantManagement.Domain.Tests.csproj", "{F7219BE2-4588-489C-9D31-647C59694C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.TenantManagement.Domain.Tests", "test\Volo.Abp.TenantManagement.Domain.Tests\Volo.Abp.TenantManagement.Domain.Tests.csproj", "{F7219BE2-4588-489C-9D31-647C59694C03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

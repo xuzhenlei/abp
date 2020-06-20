@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Volo.Abp.EditionManagement.Domain.Tests</AssemblyName>
+    <PackageId>Volo.Abp.EditionManagement.Domain.Tests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>Volo.Abp.EditionManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <ProjectReference Include="..\Volo.Abp.EditionManagement.EntityFrameworkCore.Tests\Volo.Abp.EditionManagement.EntityFrameworkCore.Tests.csproj" />
+  </ItemGroup>
+
+</Project>
